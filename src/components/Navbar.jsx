@@ -8,29 +8,46 @@ const Section = styled.div`
 `
 
 const Container = styled.div`
-
+    padding: 10px 0px;
     width: 1400px;
-    background-color: purple;
+    /* background-color: purple; */
+    display: flex;
+    justify-content: space-between;
 `
 
-// const Links = styled.div`
 
-//     width: 1400px;
-//     background-color: purple;
-// `
-// const Search = styled.div`
 
-//     width: 1400px;
-//     background-color: purple;
-// `
+const Links = styled.div`
+display: flex;
+align-items: center;
+gap: 40px;
+`
+const Logo = styled.img`
+width: 100px;
+height: 72px`;
 
-const Links = styled.div``;
-const Logo = styled.img``;
-const List = styled.ul``;
+const List = styled.ul`
+display: flex;
+gap: 20px;
+list-style: none;
+`;
 const ListItem = styled.li``;
-const Icons = styled.div``;
-const Icon = styled.img``;
-const Button = styled.button``;
+const Icons = styled.div`
+display: flex;
+align-items: center;
+gap: 20px;
+`;
+const Icon = styled.img`
+width: 20px;
+`;
+const Button = styled.button`
+width: 100px;
+padding: 10px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+background-color: #da4ea2;
+`;
 
 
 
@@ -41,7 +58,7 @@ export const Navbar = () => {
         <Container>
             <Links>
             
-            <Logo src= "./img/log1.png"/>
+            <Logo src= "./img/log2.png"/>
 
             <List>
                 <ListItem>Home</ListItem>
