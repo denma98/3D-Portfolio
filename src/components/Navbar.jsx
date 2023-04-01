@@ -47,6 +47,7 @@ cursor: pointer;
 border: none;
 border-radius: 5px;
 background-color: #da4ea2;
+color: white
 `;
 
 
