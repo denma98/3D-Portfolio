@@ -1,78 +1,94 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const Section = styled.div`
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 `
 
 const Container = styled.div`
-    padding: 10px 0px;
-    width: 1400px;
-    /* background-color: purple; */
-    display: flex;
-    justify-content: space-between;
+  padding: 10px 0px;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
 `
-
-
 
 const Links = styled.div`
-display: flex;
-align-items: center;
-gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 `
+
 const Logo = styled.img`
-width: 100px;
-height: 72px`;
+  width: 120px;
+  height: 86px;
+`
 
 const List = styled.ul`
-display: flex;
-gap: 20px;
-list-style: none;
-`;
-const ListItem = styled.li``;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+`
+
+const ListItem = styled.li``
+
 const Icons = styled.div`
-display: flex;
-align-items: center;
-gap: 20px;
-`;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`
+
 const Icon = styled.img`
-width: 20px;
-`;
+  width: 20px;
+`
+
+const Button1 = styled.button`
+  width: 100px;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #171515;
+  color: white;
+  `
+
 const Button = styled.button`
-width: 100px;
-padding: 10px;
-cursor: pointer;
-border: none;
-border-radius: 5px;
-background-color: #da4ea2;
-color: white
+  width: 100px;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: black;
+  position: relative;
 `;
-
-
 
 
 export const Navbar = () => {
   return (
     <Section>
-        <Container>
-            <Links>
-            
-            <Logo src= "./img/log2.png"/>
-
-            <List>
-                <ListItem>Home</ListItem>
-                <ListItem>Studio</ListItem>
-                <ListItem>Works</ListItem>
-                <ListItem>Contact</ListItem>
-            </List>         
-            </Links>
-            <Icons>
-                <Icon src = "./img/search.png"/>
-                <Button>Hire Now</Button>
-            </Icons>
-        </Container>
+      <Container>
+        <Links>
+          <Logo src="./img/log2.png" alt="Logo" />
+          <List>
+            <ListItem>Home</ListItem>
+            <ListItem>Studio</ListItem>
+            <ListItem>Works</ListItem>
+            <ListItem>Contact</ListItem>
+          </List>
+        </Links>
+        <Icons>
+          <Button1>
+          <Icon src="./img/git.png" alt="Github Logo" />
+            Github</Button1>
+          <Button>
+          <Icon src="./img/twit.png" alt="Twitter Logo" />
+          Twitter
+          </Button>
+        </Icons>
+      </Container>
     </Section>
   )
 }

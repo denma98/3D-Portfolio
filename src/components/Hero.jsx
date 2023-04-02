@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Navbar } from './Navbar'
+import { OrbitControls,MeshDistortMaterial, Sphere } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 
 
 
@@ -54,18 +56,18 @@ const Description = styled.div`
 
 `
 const Right = styled.div`
-  flex: 3;
+  flex: 2;
   position: relative;
 `
 const Img = styled.img`
-  width: 800px;
-  height: 600px;a
+  width: 500px;
+  height: 600px;
   object-fit: contain;
   position: absolute;
   top:0;
   bottom: 0;
   left: 0;
-  rigt: 0;
+  rigt: 100;
   margin: auto; 
   
   animation: animate 2s infinite ease alternate;
@@ -112,9 +114,26 @@ export const Hero = () => {
 
           {/* 3d model here */}
 
+          <Canvas>
+            <OrbitControls enableZoom = {false} />
+            <ambientLight intensity={1}/>
+            <directionalLight position={[3,2,1]}/>
+            
+            <Sphere args = {[1,100,200]} scale={2.7}>
+            <MeshDistortMaterial
+
+              color= "#220736"
+              attach= "material"
+              distort={0.5}
+              speed={2}
+
+            />
+            </Sphere>
+         </Canvas>
+
           <Img 
-          width={750} height= {750}
-          src = "./img/32511.png"/>
+          
+          src = "./img/astronaut.png"/>
         </Right>
 
       </Container>
