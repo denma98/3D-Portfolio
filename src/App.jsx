@@ -2,8 +2,8 @@ import { Hero } from "./components/Hero"
 import { Contact } from "./components/Contact"
 import { Who } from "./components/Who"
 import { Works } from "./components/Works"
-import Cube from "./components/cube"
 import styled from "styled-components"
+import Test from "./components/Test"
 
 
 const Container = styled.div`
@@ -28,7 +28,7 @@ function App() {
       <Who/>
       <Works/>
       <Contact/>
-      <Cube/>
+      <Test/>
     </Container>
   )
 }
