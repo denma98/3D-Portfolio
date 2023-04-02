@@ -2,6 +2,7 @@ import { Hero } from "./components/Hero"
 import { Contact } from "./components/Contact"
 import { Who } from "./components/Who"
 import { Works } from "./components/Works"
+import Cube from "./components/cube"
 import styled from "styled-components"
 
 
@@ -27,6 +28,7 @@ function App() {
       <Who/>
       <Works/>
       <Contact/>
+      <Cube/>
     </Container>
   )
 }
