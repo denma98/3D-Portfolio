@@ -99,6 +99,13 @@ const Button = styled.button`
   border-radius: 5px;
 `
 
+const scrollToSection = (selector) => {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 
 export default function  Hero(){
   return (<>
@@ -115,7 +122,7 @@ export default function  Hero(){
         </WhatWeDo>
 
         <Description>We enjoy creating delightful, human-centered digital experiences.</Description>
-        <Button>Learn more</Button>
+        <Button onClick={() => scrollToSection('#Who')}>Learn more</Button>
 
         </Left>
         

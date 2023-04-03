@@ -74,6 +74,13 @@ const Button = styled.button`
   border-radius: 5px;
 `
 
+const scrollToSection = (selector) => {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 
 export default function Who(){
   return (
@@ -99,7 +106,7 @@ export default function Who(){
         </WhatWeDo>
 
         <Description>a creative group of designers and developers with a passion for the arts.</Description>
-        <Button>See our works</Button>
+        <Button  onClick={() => scrollToSection('#Works')}>See our works</Button>
 
         </Right>
 
