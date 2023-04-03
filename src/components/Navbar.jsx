@@ -25,6 +25,7 @@ const Links = styled.div`
 const Logo = styled.img`
   width: 120px;
   height: 86px;
+  cursor: pointer
 `
 
 const List = styled.ul`
@@ -91,7 +92,7 @@ export const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/log2.png" alt="Logo" />
+          <Logo src="./img/log2.png" alt="Logo"  onClick={() => scrollToSection('#Hero')}/>
           <List>
           <ListItem onClick={() => scrollToSection('#Hero')}>Home</ListItem>
           <ListItem onClick={() => scrollToSection('#Who')}>Studio</ListItem>

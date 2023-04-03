@@ -3,6 +3,7 @@ from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
 
+
  const cube = () => {
 
     const textRef = useRef();
@@ -15,7 +16,7 @@ import React, { useRef } from "react";
 
   return(
   <mesh>
-            <boxGeometry />
+            <boxGeometry/>
             <meshStandardMaterial>
 
 

@@ -61,8 +61,10 @@ const Subtitle = styled.div`
  `
 
 const Description = styled.div`
+  font-family: Cursive;
+  /* gap : 10px; */
+`;
 
-`
 const Right = styled.div`
   flex: 2;
   position: relative;
@@ -114,14 +116,16 @@ export default function  Hero(){
     <Section id='Hero'>
       <Container>
         <Left>
-        <Title>Think. Make . Solve</Title>
+        <Title>Hi there! I'm Denma</Title>
         
         <WhatWeDo>
         <Line src = "./img/line.png"/>
-        <Subtitle>What we do</Subtitle>
+        <Subtitle>What I do</Subtitle>
         </WhatWeDo>
 
-        <Description>We enjoy creating delightful, human-centered digital experiences.</Description>
+        <Description> 
+        I am a multi-disciplinary developer with experience in designing, web development, programming, and game development. I enjoy creating interactive and visually appealing projects that are both functional and aesthetically pleasing.
+        </Description>
         <Button onClick={() => scrollToSection('#Who')}>Learn more</Button>
 
         </Left>
