@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-
+import GameDevelopment from './GameDevelopment';
+import Figma from './Figma';
+import ComputerArchitecture from './ComputerArchitecture';
+import DatabaseManagement from './DatabaseManagement';
 const data = [
-  "Web Design",
-  "Development",
-  "Illustration",
-  "Social Media",
+  "Game Development",
+  "Figma",
+  "Computer Architecture",
+  "Database Management",
 ];
 
 const Section = styled.div`
@@ -36,12 +39,18 @@ const List = styled.ul`
 
 const ListItem = styled.li`
 
-  font-size: 90px;
+  font-size: 67px;
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 1px white;
   cursor: pointer;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 0px;
+  }
 
   ::after {
     content: "${(props) => props.text}";
@@ -71,25 +80,39 @@ const ListItem = styled.li`
 
 const Right = styled.div`
   flex: 1;
-
+  
 `
 
 export default function Works(){
+  const [work, setWork] = useState("Game Development");
   return (
-    <Section>
+    <Section id = 'Works'>
 
     <Container>
     
       <Left>
 
-        <List>
-        {data.map( (item) => {
-         return <ListItem key = {item} text = {item}>{item}</ListItem>
-        })}
-        </List>
+      <List>
+            {data.map((item) => (
+              <ListItem key={item} text={item} onClick={() => setWork(item)}>
+                {item}
+              </ListItem>
+            ))}
+          </List>
       </Left>
 
-      <Right></Right>
+      <Right>
+      {work === "Game Development" ? (
+            <GameDevelopment />
+          ) : work === "Figma" ? (
+            <Figma/>
+          ) : work ==="Computer Architecture" ?(
+            <ComputerArchitecture/>
+          ) : (
+            <DatabaseManagement/>
+          )
+        }
+      </Right>
     </Container>
 
     </Section>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRef } from 'react'
 import styled from 'styled-components'
 
 const Section = styled.div`
@@ -11,6 +12,8 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+  scroll-snap-align: start;
+
 `
 
 const Links = styled.div`
@@ -71,10 +74,18 @@ const Button = styled.button`
   position: relative;
 `;
 
-export const Navbar = () => {
-  const handleClick = (route) => {
-    window.location = route;
+
+const scrollToSection = (selector) => {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
   }
+};
+
+
+
+export const Navbar = () => {
+  
 
   return (
     <Section>
@@ -82,10 +93,11 @@ export const Navbar = () => {
         <Links>
           <Logo src="./img/log2.png" alt="Logo" />
           <List>
-            <ListItem onClick={() => handleClick('./Hero')}>Home</ListItem>
-            <ListItem onClick={() => handleClick('./Who')}>Studio</ListItem>
-            <ListItem onClick={() => handleClick('/Works')}>Works</ListItem>
-            <ListItem onClick={() => handleClick('/Contact')}>Contact</ListItem>
+          <ListItem onClick={() => scrollToSection('#Hero')}>Home</ListItem>
+          <ListItem onClick={() => scrollToSection('#Who')}>Studio</ListItem>
+          <ListItem onClick={() => scrollToSection('#Works')}>Works</ListItem>
+          <ListItem onClick={() => scrollToSection('#Contact')}>Contact</ListItem>
+
           </List>
         </Links>
         <Icons>

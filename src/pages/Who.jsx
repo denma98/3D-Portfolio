@@ -77,7 +77,7 @@ const Button = styled.button`
 
 export default function Who(){
   return (
-    <Section>
+    <Section id = 'Who'>
       
       <Container>
         <Left>

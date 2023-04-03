@@ -1,14 +1,16 @@
 import styled from "styled-components"
-import { BrowserRouter, Route, Routes,} from "react-router-dom";
 import Contact from "./pages/Contact";
 import Who from "./pages/Who";
 import Works from "./pages/Works";
 import Hero from './pages/Hero'
+import { Navbar } from "./components/Navbar";
 
 const Container = styled.div`
   height: 100vh;
   background-color: rebeccapurple;
-  scroll-snap-type: y mand atory;
+  scroll-snap-type:y mandatory;
+  scroll-snap-align: start;
+
   scroll-behavior: smooth;
   overflow-y:auto;
   scrollbar-width: none;
@@ -22,14 +24,13 @@ const Container = styled.div`
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-          <Route exact path="/" Component={Hero} />
-          <Route path="/who" Component={Who} />
-          <Route path="/works" Component={Works} />
-          <Route path="/contact" Component={Contact} />
-      </Routes>
-  </BrowserRouter>
+    <Container>
+    <Hero/>
+    <Who/>
+    <Works/>
+    <Contact/>
+    </Container>
+  
   )
 }
 

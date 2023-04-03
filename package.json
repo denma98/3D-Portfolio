@@ -20,7 +20,8 @@
     "react-router-dom": "^6.10.0",
     "react-simple-maps": "^3.0.0",
     "styled-components": "^5.3.9",
-    "three": "^0.151.2"
+    "three": "^0.151.2",
+    "use-loading-steps": "^0.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

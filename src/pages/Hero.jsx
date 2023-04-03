@@ -4,7 +4,15 @@ import { Navbar } from '../components/Navbar'
 import { OrbitControls,MeshDistortMaterial, Sphere } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
-
+// const OContainer = styled.div`
+//   height: 100vh;
+//   background-color: rebeccapurple;
+//   color: white;
+//   background: url("./img/bg.jpeg");
+//   &::-webkit-scrollbar{
+//     display: none;
+//   }
+// `
 
 const Section = styled.div`
   height: 100vh;
@@ -93,8 +101,10 @@ const Button = styled.button`
 
 
 export default function  Hero(){
-  return (
-    <Section>
+  return (<>
+    <Navbar/>
+    
+    <Section id='Hero'>
       <Container>
         <Left>
         <Title>Think. Make . Solve</Title>
@@ -132,11 +142,12 @@ export default function  Hero(){
 
           <Img 
           
-          src = "./img/astronaut.png"/>
+          src = "./img/astronaut1.png"/>
         </Right>
 
       </Container>
       </Section>
+      </>
   )
 }
 
