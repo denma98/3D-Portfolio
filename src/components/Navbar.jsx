@@ -30,7 +30,13 @@ const List = styled.ul`
   list-style: none;
 `
 
-const ListItem = styled.li``
+const ListItem = styled.li`
+  cursor: pointer;
+  &:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+`
 
 const Icons = styled.div`
   display: flex;
@@ -51,7 +57,7 @@ const Button1 = styled.button`
   border-radius: 5px;
   background-color: #171515;
   color: white;
-  `
+`
 
 const Button = styled.button`
   width: 100px;
@@ -65,27 +71,31 @@ const Button = styled.button`
   position: relative;
 `;
 
-
 export const Navbar = () => {
+  const handleClick = (route) => {
+    window.location = route;
+  }
+
   return (
     <Section>
       <Container>
         <Links>
           <Logo src="./img/log2.png" alt="Logo" />
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>Studio</ListItem>
-            <ListItem>Works</ListItem>
-            <ListItem>Contact</ListItem>
+            <ListItem onClick={() => handleClick('./Hero')}>Home</ListItem>
+            <ListItem onClick={() => handleClick('./Who')}>Studio</ListItem>
+            <ListItem onClick={() => handleClick('/Works')}>Works</ListItem>
+            <ListItem onClick={() => handleClick('/Contact')}>Contact</ListItem>
           </List>
         </Links>
         <Icons>
           <Button1>
-          <Icon src="./img/git.png" alt="Github Logo" />
-            Github</Button1>
+            <Icon src="./img/git.png" alt="Github Logo" />
+            Github
+          </Button1>
           <Button>
-          <Icon src="./img/twit.png" alt="Twitter Logo" />
-          Twitter
+            <Icon src="./img/twit.png" alt="Twitter Logo" />
+            Twitter
           </Button>
         </Icons>
       </Container>

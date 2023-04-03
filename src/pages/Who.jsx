@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { OrbitControls ,} from "@react-three/drei";
-import Cube from "./cube";
+import Cube from "../components/cube";
 import { Canvas } from "@react-three/fiber";
 
 
@@ -75,7 +75,7 @@ const Button = styled.button`
 `
 
 
-export const Who = () => {
+export default function Who(){
   return (
     <Section>
       

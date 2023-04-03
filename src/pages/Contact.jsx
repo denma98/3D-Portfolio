@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components'
-import Map from "./Map"
+import Map from "../components/Map"
 import emailjs from '@emailjs/browser';
 
 const Section = styled.div`
@@ -70,7 +70,7 @@ cursor: pointer;
 
 
 
-export const Contact = () => {
+export default function Contact(){
 
   const ref = useRef()
 

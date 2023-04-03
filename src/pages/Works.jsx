@@ -74,7 +74,7 @@ const Right = styled.div`
 
 `
 
-export const Works = () => {
+export default function Works(){
   return (
     <Section>
 

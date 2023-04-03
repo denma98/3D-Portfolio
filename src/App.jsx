@@ -1,15 +1,14 @@
-import { Hero } from "./components/Hero"
-import { Contact } from "./components/Contact"
-import { Who } from "./components/Who"
-import { Works } from "./components/Works"
 import styled from "styled-components"
-
-
+import { BrowserRouter, Route, Routes,} from "react-router-dom";
+import Contact from "./pages/Contact";
+import Who from "./pages/Who";
+import Works from "./pages/Works";
+import Hero from './pages/Hero'
 
 const Container = styled.div`
   height: 100vh;
   background-color: rebeccapurple;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y mand atory;
   scroll-behavior: smooth;
   overflow-y:auto;
   scrollbar-width: none;
@@ -23,13 +22,14 @@ const Container = styled.div`
 function App() {
 
   return (
-    <Container>
-      <Hero/>
-      <Who/>
-      <Works/>
-      <Contact/>
-      
-    </Container>
+    <BrowserRouter>
+      <Routes>
+          <Route exact path="/" Component={Hero} />
+          <Route path="/who" Component={Who} />
+          <Route path="/works" Component={Works} />
+          <Route path="/contact" Component={Contact} />
+      </Routes>
+  </BrowserRouter>
   )
 }
 

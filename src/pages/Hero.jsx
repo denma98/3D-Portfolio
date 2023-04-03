@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Navbar } from './Navbar'
+import { Navbar } from '../components/Navbar'
 import { OrbitControls,MeshDistortMaterial, Sphere } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
@@ -92,10 +92,9 @@ const Button = styled.button`
 `
 
 
-export const Hero = () => {
+export default function  Hero(){
   return (
     <Section>
-      <Navbar/>
       <Container>
         <Left>
         <Title>Think. Make . Solve</Title>
