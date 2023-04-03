@@ -101,12 +101,12 @@ export const Navbar = () => {
           </List>
         </Links>
         <Icons>
-          <Button1>
+          <Button1 onClick={() => {location.href = "https://github.com/denma98"}}>
             <Icon src="./img/git.png" alt="Github Logo" />
             Github
           </Button1>
-          <Button>
-            <Icon src="./img/twit.png" alt="Twitter Logo" />
+          <Button onClick={() => {location.href = "https://twitter.com/denma098?t=A5_OTfVOcbl6jIfy2L8G6g&s=09"}}>
+            <Icon src="./img/twit.png" alt="Twitter Logo"/>
             Twitter
           </Button>
         </Icons>

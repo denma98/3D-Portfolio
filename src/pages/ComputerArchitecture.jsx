@@ -6,7 +6,7 @@ import React from "react";
 const ComputerArchitecture = () => {
   return (
     
-    <Canvas>
+    <Canvas onClick={() => {location.href = "https://github.com/Devank23/CO-Project-Assignment.git"}}>
     <Stage environment="city" intensity={0.6}>
     <Cpu/>
       </Stage>

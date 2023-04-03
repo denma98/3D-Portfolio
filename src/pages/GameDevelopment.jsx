@@ -6,7 +6,7 @@ import React from "react";
 
 const GameDevelopment = () => {
   return (
-      <Canvas>
+      <Canvas onClick={() => {location.href = "https://learn.unity.com/u/62ad75e1edbc2a4e10af695f?tab=profile"}}>
         <Stage environment="city" intensity={0.6}>
         <UnityLogo/>
           </Stage>
